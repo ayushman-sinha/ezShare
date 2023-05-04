@@ -1,0 +1,44 @@
+.Header{   
+    margin :80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.HeaderTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(53, 51, 48);
+}
+.HeaderTitleSmall{
+    font-size: 25px;
+    font-weight: bold;    
+    font-family: 'Raleway', sans-serif;
+    top:18%;
+}
+.HeaderTitleLarge{
+    font-size: 65px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color : rgb(255, 255, 255)
+   
+
+}
+.HeaderImage{
+    display: flex;
+    width:400px;
+    height:450px;
+    align-items: center;
+    justify-content: center;
+    margin-top:-78px;
+    position: relative;
+    z-index: -1;
+}
+.img_edit3{
+    width: 1300px;
+    height:100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}

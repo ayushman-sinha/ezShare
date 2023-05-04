@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Inter:wght@400;500&family=Nunito&family=Raleway:wght@200;300;400&family=Source+Code+Pro:wght@300&display=swap');
+.sidebar{
+    flex:3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebarItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10px;
+    font-family: 'Inter', sans-serif;
+}
+.sidebarTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka', cursive;
+    font-weight:600 ;
+    line-height: 20px;
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top : 1px solid rgb(51, 51, 51);
+    border-bottom : 1px solid rgb(51, 51, 51);
+}
+.sidebarItem >img{
+    margin-top: 15px;
+}
+.sidebarItem >p{
+    margin: 30px;
+}
+.sidebarList{
+    list-style: none;
+    margin-bottom: 30px;
+}
+.sideBarListItem{
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.siderbarSocial{
+    display: flex;
+    width:250px;
+    align-items:center;
+    justify-content: center;
+    margin-top: 15px;
+   
+}
+.sidebarIcon{
+    cursor: pointer;
+    flex-direction: column;
+    padding: 10px;
+}

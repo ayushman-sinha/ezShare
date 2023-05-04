@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Inter:wght@400;500&family=Nunito&family=Raleway:wght@200;300;400&family=Source+Code+Pro:wght@300&display=swap');
+.top{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+    color : rgb(0, 0, 0);
+    background-color: white;
+}
+.topLeft{
+    flex:3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px
+}
+.topRight{
+    flex:3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:4px
+}
+.topMiddle{
+    flex:6;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.profilePic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    object-fit: cover;
+}
+.topList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    list-style: none;
+}
+.navEditRight{
+    margin-right: 20px;
+}
+.logoutButton{
+    cursor: pointer;
+}
+.logoutButton:hover{
+    color: rgb(246, 33, 33);
+}

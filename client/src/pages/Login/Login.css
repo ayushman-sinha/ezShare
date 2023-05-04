@@ -1,0 +1,94 @@
+body{
+    min-height: 100vh;
+    
+
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    gap:30px;
+    min-height: 90vh;
+}
+.headingLogin{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    
+    margin-bottom: -1px;
+    cursor: pointer;
+    color: white;
+}
+.headingLogin >input{
+    padding-left: 25px;
+    width:300px;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;    
+}
+.loginButton{
+    width:120px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #000000;
+    font-family: 'Inter', sans-serif;    
+}
+.loginButton:disabled:hover{
+    cursor: not-allowed;
+    background-color: rgb(74, 74, 74);
+   
+}
+.loginButton:hover{
+    background-color: #280236;
+    color: rgb(255, 255, 255);
+    
+    transition-duration: 0.5s;    
+}
+.backgroundEdit{
+    position: absolute;
+    z-index: -3;
+}
+.heading{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

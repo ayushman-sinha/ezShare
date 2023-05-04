@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Inter:wght@400;500&family=Nunito&family=Raleway:wght@200;300;400&family=Source+Code+Pro:wght@300&display=swap');
+.inputFileEdit{
+   display: none;
+   
+}
+.write{
+    padding-top: 50px;
+}
+.writeImg{
+    margin-left: 150px;
+    width:70vw;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.writeForm{
+    position: relative;
+    margin-top: 20px;
+   
+}
+.writeFormGroup{
+    margin-top: 10px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+.writeInput{
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+}
+.iconAdd{
+    margin-right: 20px;
+}
+.writeInput:focus{
+    outline: none;
+}
+.inputTitle{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+     color: grey;
+
+}
+
+.writeText{
+    font-size:20px;
+    font-family: 'Inter', sans-serif;
+}
+.writeSubmit{
+    position: absolute;
+    top:20px;
+    right:50px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

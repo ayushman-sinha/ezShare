@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Inter:wght@400;500&family=Nunito&family=Raleway:wght@200;300;400&family=Source+Code+Pro:wght@300&display=swap');
+
+.settings{
+    display: flex;
+}
+.settingsWrapper{
+    flex:9;
+    padding: 20px;
+}
+.profilePicAttach{
+    display: none;
+}
+.settingsForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    gap:20px
+}
+.settingsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.settingsUpdateTitle{
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+.settingsDeleteTitle{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: red;
+    cursor: pointer;
+}
+.settingsProfilePic{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.settingsProfileImg{
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.profileIcon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(31, 0, 51);
+    margin-left: 30px;
+    cursor: pointer;
+}
+.settingsForm >input{
+    width:300px;
+    margin:10px 0;
+    height:30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    font-family: 'Raleway', sans-serif;
+    padding: 8px;
+}
+.settingsSubmit{
+    align-self: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    width: 140px;
+    height: 35px;
+    margin: 10px 0;    
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.settingsSubmit:hover{
+    background-color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
+    transition-duration: 50ms;
+    cursor: pointer;
+}

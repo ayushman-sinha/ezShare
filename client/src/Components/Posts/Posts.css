@@ -1,0 +1,11 @@
+.Posts{
+    flex:9;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+    text-shadow: none;
+    color:inherit;
+}
