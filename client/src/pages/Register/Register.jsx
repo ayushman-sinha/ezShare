@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './Register.css';
+// import './Register.css';
 import  background from '../..//assets/register_background.svg'
 import axios from 'axios';
 const Login = () => {
@@ -44,7 +44,7 @@ const Login = () => {
     }
   return (
     <div className='login'>
-         <img className='backgroundEdit' src={background} />
+         {/* <img className='backgroundEdit' src={background} /> */}
         <form  className="loginForm" onSubmit={handleSubmit}>
             <div className="heading">
                 Register

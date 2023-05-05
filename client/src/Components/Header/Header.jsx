@@ -6,7 +6,7 @@ const Header = () => {
     <div className='Header'>
       <div className='HeaderTitle'>
         <div className="HeaderTitleSmall">Welcome</div>
-        <div className="HeaderTitleLarge" >Blogger</div>
+        <div className="HeaderTitleLarge" >Back</div>
       </div>
       <div className="HeaderImage">
         <img src={headPic} className='img_edit3'></img> 
