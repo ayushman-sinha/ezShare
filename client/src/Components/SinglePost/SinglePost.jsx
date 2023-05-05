@@ -6,6 +6,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import { AuthContext } from '../../context/Context';
 import { useContext } from 'react';
+import Comment from '../Comment/Comment';
 
 const SinglePost = () => {
   const PF="http://localhost:3500/images/";
@@ -13,15 +14,37 @@ const SinglePost = () => {
   const [post, setPost] = useState([]);
   const location=useLocation().pathname.split('/')[2]
   const[date1,setDate1]=useState('')
+  const [comment,setComment]=useState('')
 
   // To Update
   const [title,setTitle] = useState('')
   const [desc,setDesc] = useState('')
   const [updateMode,setUpdateMode] = useState(false)
+  
+  const addComment= async (e)=>{
+       e.preventDefault()
+       const newComment={
+          username:user.username,
+          comment:comment,
+          createdAt:new Date().toISOString()
+       }
+        try{
+          const res=await axios.put("/posts/"+location+"/comment",newComment)
+          alert("Comment Added")
+        }
+        catch(err){
+          console.log(err)
+        }
+  }
+
+
+
   useEffect(() => {
     const fetchPost = async () => {
       const res = await axios.get(`/posts/${location}`)
+
       setPost(res.data)
+      //console.log(res.data)
       setDate1(new Date(res.data.createdAt).toDateString())
     }
     fetchPost()
@@ -80,7 +103,16 @@ const SinglePost = () => {
             </div>:<div className="singlePostDescription">
               {post.description}
             </div>}
+            <div className='commentContainer'>
+              <div className='commentAdd'>
+                <input type='text'placeholder='Add a comment' className='commentInput' autoFocus={true} onChange={ (e)=>{setComment(e.target.value)}}></input>
+                <button className='commentSubmit' onClick={addComment}>Add</button>
+              </div>
+               
+            </div>
         </div>
+       
+        
     </div>
   )
 }

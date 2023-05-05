@@ -18,6 +18,9 @@ const userSchema = new mongoose.Schema({
     profile_pic: {
         type: String,
         default: "https://www.pngarts.com/files/10/Default-Profile-Picture-Download-PNG-Image.png"
+    },
+    isAdmin: {
+        type: Boolean // True if Teacher False if Student
     }
     
 },{timestamps: true});

@@ -1,5 +1,5 @@
 import {useContext,useRef}from 'react';
-// import './Login.css';
+ import './Login.css';
 import {AuthContext} from '../../context/Context';
 import  background from '../..//assets/login_background.svg'
 import axios from 'axios';
@@ -27,7 +27,7 @@ const Login = () => {
     console.log(user);
   return (
     <div className='login'>
-        {/* <img className='backgroundEdit' src={background} /> */}
+        <img className='backgroundEdit' src={background} />
         <form  className="loginForm" onSubmit={handleSubmit1}>
             <div className="heading">
                 Login

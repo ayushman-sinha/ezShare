@@ -63,7 +63,7 @@ router.delete("/:id", async (req,res)=>{
 router.get("/:id", async (req,res)=>{
     try{
         const post=await Post.findById(req.params.id);
-        console.log(post);
+        //console.log(post);
         res.status(200).json(post);
     }
     catch(err){
@@ -93,5 +93,24 @@ router.get("/", async (req,res)=>{
     }  
 });
 
+//Add comment to post according to location
+router.put("/:id/comment", async (req,res)=>{
+    try{
+        let post=await Post.findById(req.params.id);
+        console.log(post);
+        if(post){
+            post.comments.push(req.body);
+            //console.log(post);
+            const updatedPost=await Post.findByIdAndUpdate(req.params.id,{$set:post},{new:true});
+            res.status(200).json(updatedPost); 
+        }
+        else{
+            res.status(401).json({message:"You are not authorized to update this post"});
+        }
+    }
+    catch(err){
+        res.status(500).json({message:err});
+    }
+})
 
 module.exports= router

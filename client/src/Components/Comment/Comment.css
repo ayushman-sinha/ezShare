@@ -1,0 +1,17 @@
+.containerComment{
+    width: 100%;
+    height:40px;
+    display: flex;
+    background-color: yellow;
+    padding:10px;
+
+}
+.commentContainer{
+    width: 90%;
+    margin-left: 20px;
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    height:200px;
+   
+}
