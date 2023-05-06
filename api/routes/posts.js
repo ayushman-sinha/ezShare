@@ -102,7 +102,82 @@ router.put("/:id/comment", async (req,res)=>{
             post.comments.push(req.body);
             //console.log(post);
             const updatedPost=await Post.findByIdAndUpdate(req.params.id,{$set:post},{new:true});
+           
             res.status(200).json(updatedPost); 
+        }
+        else{
+            res.status(401).json({message:"You are not authorized to update this post"});
+        }
+
+        
+    }
+    catch(err){
+        res.status(500).json({message:err});
+    }
+})
+
+// Delete comment from post according to location
+router.delete("/:id/comment/:commentId", async (req,res)=>{
+    try{
+        let post=await Post.findById(req.params.id);        
+       // console.log(post);
+        if(post){
+            let ar=[]
+            //console.log(req.params.commentId);
+            for(let i=0;i<post.comments.length;i++){
+                if(post.comments[i].id!=req.params.commentId){
+                    ar.push(post.comments[i]);
+                }
+            }
+            //console.log(ar);
+            const x= await Post.findByIdAndUpdate(req.params.id,{$set:{comments:ar}},{new:true});
+
+
+           
+        }
+        
+    }
+    catch(err){
+        res.status(500).json({message:err});
+    }
+})
+
+// Edit comment from post according to location
+router.put("/:id/comment/:commentId", async (req,res)=>{
+    try{
+        let post=await Post.findById(req.params.id);        
+       // console.log(post);
+        if(post){
+            let ar=[]
+            //console.log(req.params.commentId);
+            for(let i=0;i<post.comments.length;i++){
+                if(post.comments[i].id!=req.params.commentId){
+                    ar.push(post.comments[i]);
+                }
+                else{
+                    ar.push(req.body);
+                }
+            }
+            //console.log(ar);
+            const x= await Post.findByIdAndUpdate(req.params.id,{$set:{comments:ar}},{new:true});
+            res.status(200).json(x);
+        }
+    }
+    catch(err){
+        res.status(500).json({message:err});
+    }
+})
+//Update likes of post
+router.put("/:id/like", async (req,res)=>{
+    try{
+        let post=await Post.findById(req.params.id);
+        //console.log(post);
+        if(post){
+            post.likes+=req.body.likes;
+            //console.log(post);
+            const updatedPost=await Post.findByIdAndUpdate(req.params.id,{$set:post},{new:true});
+           
+            res.status(200).json(updatedPost);
         }
         else{
             res.status(401).json({message:"You are not authorized to update this post"});
@@ -112,5 +187,7 @@ router.put("/:id/comment", async (req,res)=>{
         res.status(500).json({message:err});
     }
 })
+
+
 
 module.exports= router

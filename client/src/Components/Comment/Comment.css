@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Roboto+Mono&display=swap');
+
+
 .containerComment{
     width: 100%;
     height:40px;
-    display: flex;
-    background-color: yellow;
-    padding:10px;
-
+   
 }
 .commentContainer{
     width: 90%;
@@ -13,5 +13,40 @@
     gap:20px;
     flex-direction: column;
     height:200px;
+   
+}
+.innerContainerComment{
+    width: 100%;
+    height:40px;
+    display: flex;
+    
+    padding:10px;
+    gap:10px;
+}
+.inputComment{
+    width: 250px;
+    height: 27px;
+    margin-right: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 5px 15px 5px 15px;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+.inputComment:focus{
+    scale: 1.03;
+    transition: 100ms ease-in-out all;
+}
+.commentSubmit{
+    border-style: none;
+    border-radius: 0px;
+    background-color: none;
+    all: unset;
+    cursor: pointer;
+}
+
+.commentAdd{
+    display: flex;
+    flex-direction: row;
    
 }

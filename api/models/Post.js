@@ -50,6 +50,11 @@ const PostSchema = new mongoose.Schema({
     comments: {
         type: Array,
         required: false
+    },
+    likes: {
+        type :Number,
+        required: true,
+        default: 0
     }
     
 },{timestamp: true});

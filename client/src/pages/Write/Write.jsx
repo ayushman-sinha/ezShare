@@ -14,8 +14,8 @@ const Write = () => {
         const newPost = {
             username:user.username,
             title,
-            description:desc,            
-
+            description:desc, 
+            likes:0   
         }
         if(file){
             const data = new FormData()
